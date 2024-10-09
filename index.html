@@ -49,7 +49,7 @@
         <nav id="primary-navigation" class="site-navigation">
             <div class="container">
                 <div class="navbar-header page-scroll">
-
+                    <button id="toggle-footer-btn" onclick="toggleFooter()" class="btn btn-border toggle-footer-btn">Hide Footer</button>
                     <button type="button" class="navbar-toggle collapsed" data-target="#portfolio-perfect-collapse" aria-expanded="false" >
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -88,7 +88,7 @@
                         <p class="job-title">Full Stack Developer</p>
                         <a href="#contact" class="btn btn-fill ">Hire me</a>
                         <div class="clearfix visible-xxs"></div>
-                        <a href="#portfolio" class="btn btn-border">Explore more</a>
+                        <a href="#about" class="btn btn-border">Explore more</a>
                     </div>
                 </div>
             
@@ -224,7 +224,7 @@
                             <div class="portfolio-item-info">
                                 <h4>Minesweeper</h4>
                                 <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href=""><span class="glyphicon glyphicon-link"></span></a>
+                                <a href="https://github.com/natiapa/minesweeper"><span class="glyphicon glyphicon-link"></span></a>
                             </div><!-- /.portfolio-item-info -->
                         </div><!-- /.portfolio-item -->
                     </div>
@@ -295,6 +295,7 @@
                     <a class="icon linkedin-bg" href="https://www.linkedin.com/in/natia-cohen-276624303/"><i class="icon-linkedin"></i></a>
                     <a class="icon github-bg" href="https://github.com/natiapa" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
+
                 <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3"><p class="copyright">© 2024 Natia Cohen. All Rights Reserved</p></div>
                 <div class="col-sm-4 col-xs-3">
                     <div class="text-right page-scroll">
@@ -337,7 +338,7 @@
             <p>A classic Minesweeper game developed using JavaScript, HTML, and CSS. Players must uncover all non-mine cells without triggering any mines. The game includes features such as a timer, mine counter, and difficulty levels. The user interface is designed for an intuitive and engaging gameplay experience.</p>
           </div>
           <div class="modal-footer">
-            <a href="#" class="btn btn-fill">Visit Page</a>
+            <a href="https://natiapa.github.io/minesweeper/" class="btn btn-fill">Visit Page</a>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -425,6 +426,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
     <script src="assets/js/jquery.countTo.min.js"></script>
     <script src="assets/js/script.js"></script>
-  
+    <script>
+        function toggleFooter() {
+          var footer = document.getElementById('colophon'); // Select the footer
+          var button = document.getElementById('toggle-footer-btn'); // Select the button
+      
+          if (footer.style.display === "none") {
+            footer.style.display = "block"; // Show the footer
+            button.textContent = "Hide Footer"; // Update button text
+          } else {
+            footer.style.display = "none"; // Hide the footer
+            button.textContent = "Show Footer"; // Update button text
+          }
+        }
+      </script>
+      
 </body>
 </html>

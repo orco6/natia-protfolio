@@ -430,6 +430,21 @@ html, body {
     }
 }
 
+/* Styling the toggle footer button to be small and without border */
+.toggle-footer-btn {
+    color: #0c0b0b; /* White text */
+    background-color: transparent; /* Transparent background */
+    font-size: 12px; /* Smaller font size */
+    border: none; /* Remove the border */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    cursor: pointer; /* Make the button look clickable */
+}
+
+.toggle-footer-btn:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
+}
+
 
 /* For smaller screens like iPhone */
 @media (max-width: 768px) {
