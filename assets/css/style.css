@@ -410,11 +410,49 @@ html, body {
     left: 50px;
     opacity: 1;
 }
-.natia {
-    width: 460px;
-    height: 460px;
-    object-fit: cover;
-    transform: translateY(-150px);}
+
+/* General image responsiveness */
+.natia img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* This ensures the image scales correctly within its container */
+}
+/* For smaller screens like iPhone */
+@media (max-width: 768px) {
+    /* Adjust the portfolio items' layout and spacing */
+    .portfolio-item {
+        margin-bottom: 20px; /* Add spacing between items */
+    }
+
+    .section-portfolio .col-md-4 {
+        width: 100%; /* Make each portfolio item take the full width of the screen */
+        margin-bottom: 20px; /* Add spacing between each portfolio item */
+    }
+}
+
+
+/* For smaller screens like iPhone */
+@media (max-width: 768px) {
+    .natia {
+        width: 100%; /* Make the image take up the full width of the screen */
+        height: auto; /* Automatically adjust height to maintain aspect ratio */
+        transform: translateY(0); /* Remove the translateY on small screens to prevent cutoff */
+        margin-top: 20px; /* Add some spacing above if necessary */
+    }
+
+    .hero h1 {
+        font-size: 24px; /* Make the heading smaller on small screens */
+    }
+
+    .job-title {
+        font-size: 18px; /* Adjust job title font size for mobile */
+    }
+
+    .btn {
+        padding: 0 20px; /* Reduce button padding on small screens */
+        font-size: 14px; /* Make the button text smaller */
+    }
+}
 
 
 .portfolio-item-info h4 {
